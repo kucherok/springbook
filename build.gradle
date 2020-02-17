@@ -1,0 +1,12 @@
+subprojects {
+    version '0.1'
+    
+    repositories {
+        jcenter()
+        mavenCentral()
+    }
+}
+
+tasks.withType(JavaCompile) {
+    options.encoding = "UTF-8"
+}
