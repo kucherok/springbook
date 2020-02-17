@@ -2,9 +2,21 @@ subprojects {
     group 'by.kucher.springbook.ch02'
     apply plugin: 'java'
     
+    /*Task that copies all the dependencies under build/libs */
+	task copyDependencies(type: Copy) {
+		from configurations.compile
+		into 'build/libs'
+	}
+	
+	test {
+        useJUnitPlatform()
+    }
+    
     dependencies {
-        compile 'org.springframework:spring-context:5.2.3.RELEASE' 
-        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'
-        testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'
+        compile 'org.springframework:spring-context:5.2.3.RELEASE'
+        /*testCompile 'org.junit.platform:junit-platform-launcher:1.6.0'
+        testImplementation 'org.junit.jupiter:junit-jupiter-api:5.3.1'*/
+        testImplementation('org.junit.jupiter:junit-jupiter:5.6.0')
+        /*testRuntimeOnly 'org.junit.jupiter:junit-jupiter-engine:5.3.1'*/
     }
 }
