@@ -1,0 +1,9 @@
+jar {
+    manifest {
+        attributes (
+            /*'Main-Class' : 'by.kucher.springbook.ch02.helloworld.HelloWorldSpringDI',*/
+            'Main-Class' : 'by.kucher.springbook.ch03.annotated.AnnotatedBeanNaming',
+            'Class-Path' : configurations.compile.collect { it.getName() }.join(' ')
+        )
+    }
+}

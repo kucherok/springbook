@@ -1,5 +1,5 @@
 subprojects {
-    group 'by.kucher.springbook.ch02'
+    group 'by.kucher.springbook.ch03'
     apply plugin: 'java'
     
     /*Task that copies all the dependencies under build/libs */

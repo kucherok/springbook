@@ -3,6 +3,7 @@ println('Kucher code sample book pro spring 5')
 rootProject.name = 'springbook'
 
 include 'ch02', 'ch02:hello-world'
+include 'ch03', 'ch03:annotated'
 
 //we check if the modules have gradle configuration files
 rootProject.children.each { project ->
